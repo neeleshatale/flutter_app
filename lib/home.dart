@@ -130,8 +130,7 @@ class _MyHomePageState extends State<MyHomePage> {
         tooltip: 'Increment',
         child: Icon(
           Icons.add_circle,
-          color: Colors.black,
-          size: 40,
+          size: 50,
         ),
       ),
       drawer: getNavDrawer(
@@ -140,7 +139,30 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   Drawer getNavDrawer(BuildContext context) {
-    var headerChild = DrawerHeader(child: Text("Header"));
+    var headerChild = DrawerHeader(
+        child: Row(
+      mainAxisAlignment: MainAxisAlignment.start,
+      children: <Widget>[
+        new Container(
+          width: 60.0,
+          height: 60.0,
+          decoration: new BoxDecoration(
+            color: const Color(0xf08c94b6),
+            image: new DecorationImage(
+              image: new NetworkImage('http://i.imgur.com/QSev0hg.jpg'),
+              fit: BoxFit.cover,
+            ),
+            borderRadius: new BorderRadius.all(new Radius.circular(50.0)),
+            border: new Border.all(
+              color: Theme.of(context).primaryColor,
+              width: 4.0,
+            ),
+          ),
+        ),
+        Spacer(flex: 1),
+        Text("First Name", style: Theme.of(context).textTheme.title)
+      ],
+    ));
     ListTile getNavItem(var icon, String s, Widget widget) {
       return ListTile(
         leading: Icon(icon),
