@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
           primarySwatch: Colors.blue,
           secondaryHeaderColor: Colors.red,
         ),
-        home: MyHomePage(title: 'Flutter Demo Home Page'),
+        home: MyHomePage(title: 'Home Page'),
         routes: <String, WidgetBuilder>{
           // define the routes
           SettingsScreen.routeName: (BuildContext context) => SettingsScreen(),

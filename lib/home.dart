@@ -149,7 +149,7 @@ class _MyHomePageState extends State<MyHomePage> {
           decoration: new BoxDecoration(
             color: const Color(0xf08c94b6),
             image: new DecorationImage(
-              image: new NetworkImage('http://i.imgur.com/QSev0hg.jpg'),
+              image: new NetworkImage('https://www.gstatic.com/webp/gallery/1.jpg'),
               fit: BoxFit.cover,
             ),
             borderRadius: new BorderRadius.all(new Radius.circular(50.0)),
